@@ -2,6 +2,7 @@
 <head> 
  <title>My Document</title> 
  <script type="text/javascript"> 
+ 
  function change() { 
  var header = document.getElementById("hid123"); 
  header.innerHTML = "CSIE@CGU"; 
@@ -10,10 +11,16 @@
  para.innerHTML = "怎麼那麼棒！！."; 
  
  } 
+ function myFunction() { 
+ var btn = document.createElement("BUTTON"); 
+ btn.innerHTML = "Change this document"; 
+ document.body.appendChild(btn); 
+ btn.addEventListener("click", change); 
+} 
  </script> 
 </head> 
 <body> 
- <input type="button" value="Change this document." onclick="change()"> 
+ <button  type="BUTTON" onclick="myFunction()">Try it</button> 
  <h1 id="hid123">CGU</h1> 
  <p id="pid123">好棒棒</p> 
 </body> 
